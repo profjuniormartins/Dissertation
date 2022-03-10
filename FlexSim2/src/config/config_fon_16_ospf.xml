@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<!-- First the physical topology of the network and after the simulation parameters. -->
+<!-- Nodes in network (completely arbitrary) -->
+<Nodes>
+    <Node>1</Node>            
+    <Node>2</Node>            
+    <Node>3</Node>            
+    <Node>4</Node>            
+    <Node>5</Node>            
+    <Node>6</Node>            
+    <Node>7</Node>            
+    <Node>8</Node>            
+    <Node>9</Node>            
+    <Node>10</Node>            
+    <Node>11</Node>            
+    <Node>12</Node>            
+    <Node>13</Node>            
+    <Node>14</Node>            
+</Nodes>
+<!-- Paths between nodes -->
+<Paths>
+	<!-- Path from="source_node" to="target_node" value="cost" lambda="number_wavelengths" dataRate="(bits/sec)" -->
+    <Path from="1" to="2" value="1" lambda="16" length="940" dataRate="10E9"/>
+    <Path from="1" to="3" value="1" lambda="16" length="1400" dataRate="10E9"/>
+    <Path from="1" to="8" value="1" lambda="16" length="2240" dataRate="10E9"/>
+    <Path from="2" to="3" value="1" lambda="16" length="560" dataRate="10E9"/>
+    <Path from="2" to="4" value="1" lambda="16" length="700" dataRate="10E9"/>
+    <Path from="3" to="6" value="1" lambda="16" length="1680" dataRate="10E9"/>
+    <Path from="4" to="5" value="1" lambda="16" length="560" dataRate="10E9"/>
+    <Path from="4" to="10" value="1" lambda="16" length="1820" dataRate="10E9"/>
+    <Path from="5" to="6" value="1" lambda="16" length="1120" dataRate="10E9"/>
+    <Path from="5" to="7" value="1" lambda="16" length="700" dataRate="10E9"/>
+    <Path from="6" to="9" value="1" lambda="16" length="980" dataRate="10E9"/>
+    <Path from="6" to="12" value="1" lambda="16" length="1680" dataRate="10E9"/>
+    <Path from="7" to="8" value="1" lambda="16" length="700" dataRate="10E9"/>
+    <Path from="8" to="11" value="1" lambda="16" length="700" dataRate="10E9"/>
+    <Path from="9" to="11" value="1" lambda="16" length="700" dataRate="10E9"/>
+    <Path from="10" to="13" value="1" lambda="16" length="700" dataRate="10E9"/>
+    <Path from="10" to="14" value="1" lambda="16" length="560" dataRate="10E9"/>
+    <Path from="11" to="13" value="1" lambda="16" length="280" dataRate="10E9"/>
+    <Path from="11" to="14" value="1" lambda="16" length="280" dataRate="10E9"/>
+    <Path from="12" to="13" value="1" lambda="16" length="140" dataRate="10E9"/>
+    <Path from="12" to="14" value="1" lambda="16" length="280" dataRate="10E9"/>
+
+    <Path from="2" to="1" value="1" lambda="16" length="940" dataRate="10E9"/>
+    <Path from="3" to="1" value="1" lambda="16" length="1400" dataRate="10E9"/>
+    <Path from="8" to="1" value="1" lambda="16" length="2240" dataRate="10E9"/>
+    <Path from="3" to="2" value="1" lambda="16" length="560" dataRate="10E9"/>
+    <Path from="4" to="2" value="1" lambda="16" length="700" dataRate="10E9"/>
+    <Path from="6" to="3" value="1" lambda="16" length="1680" dataRate="10E9"/>
+    <Path from="5" to="4" value="1" lambda="16" length="560" dataRate="10E9"/>
+    <Path from="10" to="4" value="1" lambda="16" length="1820" dataRate="10E9"/>
+    <Path from="6" to="5" value="1" lambda="16" length="1120" dataRate="10E9"/>
+    <Path from="7" to="5" value="1" lambda="16" length="700" dataRate="10E9"/>
+    <Path from="9" to="6" value="1" lambda="16" length="980" dataRate="10E9"/>
+    <Path from="12" to="6" value="1" lambda="16" length="1680" dataRate="10E9"/>
+    <Path from="8" to="7" value="1" lambda="16" length="700" dataRate="10E9"/>
+    <Path from="11" to="8" value="1" lambda="16" length="700" dataRate="10E9"/>
+    <Path from="11" to="9" value="1" lambda="16" length="700" dataRate="10E9"/>
+    <Path from="13" to="10" value="1" lambda="16" length="700" dataRate="10E9"/>
+    <Path from="14" to="10" value="1" lambda="16" length="560" dataRate="10E9"/>
+    <Path from="13" to="11" value="1" lambda="16" length="280" dataRate="10E9"/>
+    <Path from="14" to="11" value="1" lambda="16" length="280" dataRate="10E9"/>
+    <Path from="13" to="12" value="1" lambda="16" length="140" dataRate="10E9"/>
+    <Path from="14" to="12" value="1" lambda="16" length="280" dataRate="10E9"/>
+</Paths>
+<!-- Simulation Parameters -->
+<Simulation>
+	<!-- The simulator's main part. -->
+	<Main>
+		<!-- The variable of the simulation -->
+		<Variable name="/Generators/Traffic/@load" step="10" stop="120.1"/>
+		<!-- Number of requests. -->
+		<Requests value="100000" gracePeriod="0"/>
+		<!-- The control plane used for this simulation. -->
+		<!-- <ControlPlane class="main.ControlPlane"/> -->
+		<Network class="fon.ospf.OSPFFON" seed="666"/> 
+	</Main>
+	<!-- The generators of traffic for the simulation -->
+	<Generators>
+		<Traffic class="fon.NonUniformRequestTraffic" type="Poissonian" start="1" load="30" duration="100" seed="" bandwidth="12.5" bandwidths_probabilities="1" seed_bandwidth="666"/>
+		<Traffic class="fon.ospf.OSPFRefreshTraffic" start="0" type="Constant" arrivalRate="0.01" serviceRate="1.0"/>		 
+	</Generators>
+		<!-- Accounting part. -->	
+	<Accounting>
+		<!-- The accounting class -->
+		<Accounting class="fon.FlexiAccounting"/>
+		<!-- The subscribers that are accounted for the number of requests. -->
+		<!-- <RequestRelated class="event.EventSubscriber"/> -->
+		<RequestRelated class="fon.NonUniformRequestTraffic"/>
+	</Accounting>	
+	<RSA>
+		<Overhead header="" label="4"/>
+		<Link slots="16" anchorFrequency="" />
+		<!--<Routing deterministic="true" hopLimit="21" rerouting="SEGMENT" attempts="2" maxAttempts="21"/> -->
+		<Routing deterministic="true" hopLimit="21" rerouting="END_TO_END" attempts="2" maxAttempts="2"/>		
+		<!--  <SA strategy="FIRST_FIT"/> -->
+		<SA strategy="FIRST_FIT" sliding="false" window="50"/>
+	</RSA>
+	<Failure>
+		<!-- <NodeFailure node="1" time="10"/> -->
+		<!--  <LinkFailure link="1-2" time="10"/> -->
+		<Timing localization="10E-3"/>
+	</Failure>
+	<Outputs>
+		<!-- The output file containing the simulation values. -->
+		<Output file="teste_ospf_16_2.txt"/>
+		<!-- The transient time slice. -->
+		<Transient timeSlice="10000"/>
+		<!-- The variables that are printed in the output file. -->
+		<Print>LOAD</Print>
+		<!--  <Print>VARIABLE</Print> -->
+		<!--  <Print>REQUESTS</Print> -->
+		<!--  <Print>SUCCESS</Print> -->
+		<!--  <Print>FAILED</Print> -->
+		<Print>BLOCKING</Print>
+		<Print>SETUP_TIME</Print>
+		<!-- In other files. -->
+	</Outputs>
+</Simulation>
+</config>

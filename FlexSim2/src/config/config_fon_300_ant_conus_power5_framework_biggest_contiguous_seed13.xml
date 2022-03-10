@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Created by pavani on 8 de Maio de 2003, 10:44 -->
+<config>
+<!-- First the physical topology of the network and after the simulation parameters. -->
+<!-- Nodes in network (completely arbitrary) -->
+<Nodes>
+	<Node>1</Node>
+	<Node>2</Node>
+	<Node>3</Node>
+	<Node>4</Node>
+	<Node>5</Node>
+	<Node>6</Node>
+	<Node>7</Node>
+	<Node>8</Node>
+	<Node>9</Node>
+	<Node>10</Node>
+	<Node>11</Node>
+	<Node>12</Node>
+	<Node>13</Node>
+	<Node>14</Node>
+	<Node>15</Node>
+	<Node>16</Node>
+	<Node>17</Node>
+	<Node>18</Node>
+	<Node>19</Node>
+	<Node>20</Node>
+	<Node>21</Node>
+	<Node>22</Node>
+	<Node>23</Node>
+	<Node>24</Node>
+	<Node>25</Node>
+	<Node>26</Node>
+	<Node>27</Node>
+	<Node>28</Node>
+	<Node>29</Node>
+	<Node>30</Node>
+	<Node>31</Node>
+	<Node>32</Node>
+	<Node>33</Node>
+	<Node>34</Node>
+	<Node>35</Node>
+	<Node>36</Node>
+	<Node>37</Node>
+	<Node>38</Node>
+	<Node>39</Node>
+	<Node>40</Node>
+	<Node>41</Node>
+	<Node>42</Node>
+	<Node>43</Node>
+	<Node>44</Node>
+	<Node>45</Node>
+	<Node>46</Node>
+	<Node>47</Node>
+	<Node>48</Node>
+	<Node>49</Node>
+	<Node>50</Node>
+	<Node>51</Node>
+	<Node>52</Node>
+	<Node>53</Node>
+	<Node>54</Node>
+	<Node>55</Node>
+	<Node>56</Node>
+	<Node>57</Node>
+	<Node>58</Node>
+	<Node>59</Node>
+	<Node>60</Node>
+	<Node>61</Node>
+	<Node>62</Node>
+	<Node>63</Node>
+	<Node>64</Node>
+	<Node>65</Node>
+	<Node>66</Node>
+	<Node>67</Node>
+	<Node>68</Node>
+	<Node>69</Node>
+	<Node>70</Node>
+	<Node>71</Node>
+	<Node>72</Node>
+	<Node>73</Node>
+	<Node>74</Node>
+	<Node>75</Node>
+</Nodes>
+<!-- Paths between nodes -->
+<Paths>
+<!-- Path from="source_node" to="target_node" value="cost" lambda="number_wavelengths" dataRate="(bits/sec)" -->
+	<Path from="1" to="19" value="1" lambda="16" length="336.9509334" dataRate="10E9" />
+	<Path from="19" to="1" value="1" lambda="16" length="336.9509334" dataRate="10E9" />
+	<Path from="1" to="22" value="1" lambda="16" length="761.2090776" dataRate="10E9" />
+	<Path from="22" to="1" value="1" lambda="16" length="761.2090776" dataRate="10E9" />
+	<Path from="2" to="11" value="1" lambda="16" length="277.0649613" dataRate="10E9" />
+	<Path from="11" to="2" value="1" lambda="16" length="277.0649613" dataRate="10E9" />
+	<Path from="2" to="67" value="1" lambda="16" length="234.2212201" dataRate="10E9" />
+	<Path from="67" to="2" value="1" lambda="16" length="234.2212201" dataRate="10E9" />
+	<Path from="3" to="19" value="1" lambda="16" length="1133.443119" dataRate="10E9" />
+	<Path from="19" to="3" value="1" lambda="16" length="1133.443119" dataRate="10E9" />
+	<Path from="3" to="20" value="1" lambda="16" length="647.7371779" dataRate="10E9" />
+	<Path from="20" to="3" value="1" lambda="16" length="647.7371779" dataRate="10E9" />
+	<Path from="3" to="22" value="1" lambda="16" length="436.9494668" dataRate="10E9" />
+	<Path from="22" to="3" value="1" lambda="16" length="436.9494668" dataRate="10E9" />
+	<Path from="3" to="29" value="1" lambda="16" length="943.5364333" dataRate="10E9" />
+	<Path from="29" to="3" value="1" lambda="16" length="943.5364333" dataRate="10E9" />
+	<Path from="4" to="9" value="1" lambda="16" length="266.2280948" dataRate="10E9" />
+	<Path from="9" to="4" value="1" lambda="16" length="266.2280948" dataRate="10E9" />
+	<Path from="4" to="14" value="1" lambda="16" length="439.2379644" dataRate="10E9" />
+	<Path from="14" to="4" value="1" lambda="16" length="439.2379644" dataRate="10E9" />
+	<Path from="4" to="27" value="1" lambda="16" length="554.1108875" dataRate="10E9" />
+	<Path from="27" to="4" value="1" lambda="16" length="554.1108875" dataRate="10E9" />
+	<Path from="5" to="26" value="1" lambda="16" length="282.0488176" dataRate="10E9" />
+	<Path from="26" to="5" value="1" lambda="16" length="282.0488176" dataRate="10E9" />
+	<Path from="5" to="57" value="1" lambda="16" length="143.5525064" dataRate="10E9" />
+	<Path from="57" to="5" value="1" lambda="16" length="143.5525064" dataRate="10E9" />
+	<Path from="6" to="47" value="1" lambda="16" length="179.1949651" dataRate="10E9" />
+	<Path from="47" to="6" value="1" lambda="16" length="179.1949651" dataRate="10E9" />
+	<Path from="6" to="49" value="1" lambda="16" length="384.8187539" dataRate="10E9" />
+	<Path from="49" to="6" value="1" lambda="16" length="384.8187539" dataRate="10E9" />
+	<Path from="6" to="73" value="1" lambda="16" length="67.17947405" dataRate="10E9" />
+	<Path from="73" to="6" value="1" lambda="16" length="67.17947405" dataRate="10E9" />
+	<Path from="7" to="26" value="1" lambda="16" length="500.1517957" dataRate="10E9" />
+	<Path from="26" to="7" value="1" lambda="16" length="500.1517957" dataRate="10E9" />
+	<Path from="7" to="39" value="1" lambda="16" length="147.3504058" dataRate="10E9" />
+	<Path from="39" to="7" value="1" lambda="16" length="147.3504058" dataRate="10E9" />
+	<Path from="8" to="10" value="1" lambda="16" length="729.0170987" dataRate="10E9" />
+	<Path from="10" to="8" value="1" lambda="16" length="729.0170987" dataRate="10E9" />
+	<Path from="8" to="20" value="1" lambda="16" length="880.041712" dataRate="10E9" />
+	<Path from="20" to="8" value="1" lambda="16" length="880.041712" dataRate="10E9" />
+	<Path from="8" to="64" value="1" lambda="16" length="848.8579799" dataRate="10E9" />
+	<Path from="64" to="8" value="1" lambda="16" length="848.8579799" dataRate="10E9" />
+	<Path from="9" to="38" value="1" lambda="16" length="352.382908" dataRate="10E9" />
+	<Path from="38" to="9" value="1" lambda="16" length="352.382908" dataRate="10E9" />
+	<Path from="9" to="39" value="1" lambda="16" length="582.4644304" dataRate="10E9" />
+	<Path from="39" to="9" value="1" lambda="16" length="582.4644304" dataRate="10E9" />
+	<Path from="10" to="37" value="1" lambda="16" length="738.9401642" dataRate="10E9" />
+	<Path from="37" to="10" value="1" lambda="16" length="738.9401642" dataRate="10E9" />
+	<Path from="11" to="51" value="1" lambda="16" length="79.92293577" dataRate="10E9" />
+	<Path from="51" to="11" value="1" lambda="16" length="79.92293577" dataRate="10E9" />
+	<Path from="12" to="17" value="1" lambda="16" length="336.4337393" dataRate="10E9" />
+	<Path from="17" to="12" value="1" lambda="16" length="336.4337393" dataRate="10E9" />
+	<Path from="12" to="54" value="1" lambda="16" length="126.6263824" dataRate="10E9" />
+	<Path from="54" to="12" value="1" lambda="16" length="126.6263824" dataRate="10E9" />
+	<Path from="13" to="27" value="1" lambda="16" length="379.311106" dataRate="10E9" />
+	<Path from="27" to="13" value="1" lambda="16" length="379.311106" dataRate="10E9" />
+	<Path from="13" to="52" value="1" lambda="16" length="430.1818131" dataRate="10E9" />
+	<Path from="52" to="13" value="1" lambda="16" length="430.1818131" dataRate="10E9" />
+	<Path from="14" to="24" value="1" lambda="16" length="159.8834469" dataRate="10E9" />
+	<Path from="24" to="14" value="1" lambda="16" length="159.8834469" dataRate="10E9" />
+	<Path from="15" to="21" value="1" lambda="16" length="459.1452686" dataRate="10E9" />
+	<Path from="21" to="15" value="1" lambda="16" length="459.1452686" dataRate="10E9" />
+	<Path from="15" to="36" value="1" lambda="16" length="165.3264805" dataRate="10E9" />
+	<Path from="36" to="15" value="1" lambda="16" length="165.3264805" dataRate="10E9" />
+	<Path from="15" to="65" value="1" lambda="16" length="357.5730073" dataRate="10E9" />
+	<Path from="65" to="15" value="1" lambda="16" length="357.5730073" dataRate="10E9" />
+	<Path from="16" to="18" value="1" lambda="16" length="193.2153767" dataRate="10E9" />
+	<Path from="18" to="16" value="1" lambda="16" length="193.2153767" dataRate="10E9" />
+	<Path from="16" to="33" value="1" lambda="16" length="177.4925816" dataRate="10E9" />
+	<Path from="33" to="16" value="1" lambda="16" length="177.4925816" dataRate="10E9" />
+	<Path from="16" to="73" value="1" lambda="16" length="777.0507392" dataRate="10E9" />
+	<Path from="73" to="16" value="1" lambda="16" length="777.0507392" dataRate="10E9" />
+	<Path from="17" to="18" value="1" lambda="16" length="238.9630572" dataRate="10E9" />
+	<Path from="18" to="17" value="1" lambda="16" length="238.9630572" dataRate="10E9" />
+	<Path from="17" to="70" value="1" lambda="16" length="191.2436294" dataRate="10E9" />
+	<Path from="70" to="17" value="1" lambda="16" length="191.2436294" dataRate="10E9" />
+	<Path from="18" to="49" value="1" lambda="16" length="294.7135669" dataRate="10E9" />
+	<Path from="49" to="18" value="1" lambda="16" length="294.7135669" dataRate="10E9" />
+	<Path from="19" to="26" value="1" lambda="16" length="432.7312491" dataRate="10E9" />
+	<Path from="26" to="19" value="1" lambda="16" length="432.7312491" dataRate="10E9" />
+	<Path from="19" to="30" value="1" lambda="16" length="553.9582807" dataRate="10E9" />
+	<Path from="30" to="19" value="1" lambda="16" length="553.9582807" dataRate="10E9" />
+	<Path from="19" to="44" value="1" lambda="16" length="366.9361351" dataRate="10E9" />
+	<Path from="44" to="19" value="1" lambda="16" length="366.9361351" dataRate="10E9" />
+	<Path from="20" to="45" value="1" lambda="16" length="920.3373588" dataRate="10E9" />
+	<Path from="45" to="20" value="1" lambda="16" length="920.3373588" dataRate="10E9" />
+	<Path from="20" to="56" value="1" lambda="16" length="731.2717231" dataRate="10E9" />
+	<Path from="56" to="20" value="1" lambda="16" length="731.2717231" dataRate="10E9" />
+	<Path from="21" to="70" value="1" lambda="16" length="107.2436957" dataRate="10E9" />
+	<Path from="70" to="21" value="1" lambda="16" length="107.2436957" dataRate="10E9" />
+	<Path from="22" to="57" value="1" lambda="16" length="964.4531908" dataRate="10E9" />
+	<Path from="57" to="22" value="1" lambda="16" length="964.4531908" dataRate="10E9" />
+	<Path from="22" to="71" value="1" lambda="16" length="505.7485307" dataRate="10E9" />
+	<Path from="71" to="22" value="1" lambda="16" length="505.7485307" dataRate="10E9" />
+	<Path from="23" to="29" value="1" lambda="16" length="496.1990407" dataRate="10E9" />
+	<Path from="29" to="23" value="1" lambda="16" length="496.1990407" dataRate="10E9" />
+	<Path from="23" to="32" value="1" lambda="16" length="386.6707817" dataRate="10E9" />
+	<Path from="32" to="23" value="1" lambda="16" length="386.6707817" dataRate="10E9" />
+	<Path from="23" to="43" value="1" lambda="16" length="289.9410618" dataRate="10E9" />
+	<Path from="43" to="23" value="1" lambda="16" length="289.9410618" dataRate="10E9" />
+	<Path from="24" to="33" value="1" lambda="16" length="690.4091794" dataRate="10E9" />
+	<Path from="33" to="24" value="1" lambda="16" length="690.4091794" dataRate="10E9" />
+	<Path from="24" to="52" value="1" lambda="16" length="131.0972102" dataRate="10E9" />
+	<Path from="52" to="24" value="1" lambda="16" length="131.0972102" dataRate="10E9" />
+	<Path from="24" to="53" value="1" lambda="16" length="317.8965469" dataRate="10E9" />
+	<Path from="53" to="24" value="1" lambda="16" length="317.8965469" dataRate="10E9" />
+	<Path from="25" to="31" value="1" lambda="16" length="186.2707622" dataRate="10E9" />
+	<Path from="31" to="25" value="1" lambda="16" length="186.2707622" dataRate="10E9" />
+	<Path from="25" to="51" value="1" lambda="16" length="125.5599482" dataRate="10E9" />
+	<Path from="51" to="25" value="1" lambda="16" length="125.5599482" dataRate="10E9" />
+	<Path from="27" to="46" value="1" lambda="16" length="246.5770348" dataRate="10E9" />
+	<Path from="46" to="27" value="1" lambda="16" length="246.5770348" dataRate="10E9" />
+	<Path from="28" to="45" value="1" lambda="16" length="314.0322058" dataRate="10E9" />
+	<Path from="45" to="28" value="1" lambda="16" length="314.0322058" dataRate="10E9" />
+	<Path from="28" to="66" value="1" lambda="16" length="470.8657976" dataRate="10E9" />
+	<Path from="66" to="28" value="1" lambda="16" length="470.8657976" dataRate="10E9" />
+	<Path from="28" to="72" value="1" lambda="16" length="418.4383844" dataRate="10E9" />
+	<Path from="72" to="28" value="1" lambda="16" length="418.4383844" dataRate="10E9" />
+	<Path from="29" to="48" value="1" lambda="16" length="495.9003239" dataRate="10E9" />
+	<Path from="48" to="29" value="1" lambda="16" length="495.9003239" dataRate="10E9" />
+	<Path from="29" to="56" value="1" lambda="16" length="700.0051286" dataRate="10E9" />
+	<Path from="56" to="29" value="1" lambda="16" length="700.0051286" dataRate="10E9" />
+	<Path from="30" to="34" value="1" lambda="16" length="261.3433471" dataRate="10E9" />
+	<Path from="34" to="30" value="1" lambda="16" length="261.3433471" dataRate="10E9" />
+	<Path from="31" to="40" value="1" lambda="16" length="29.36152283" dataRate="10E9" />
+	<Path from="40" to="31" value="1" lambda="16" length="29.36152283" dataRate="10E9" />
+	<Path from="32" to="58" value="1" lambda="16" length="223.8445086" dataRate="10E9" />
+	<Path from="58" to="32" value="1" lambda="16" length="223.8445086" dataRate="10E9" />
+	<Path from="32" to="61" value="1" lambda="16" length="150.6766134" dataRate="10E9" />
+	<Path from="61" to="32" value="1" lambda="16" length="150.6766134" dataRate="10E9" />
+	<Path from="33" to="38" value="1" lambda="16" length="295.1182142" dataRate="10E9" />
+	<Path from="38" to="33" value="1" lambda="16" length="295.1182142" dataRate="10E9" />
+	<Path from="33" to="66" value="1" lambda="16" length="473.8016755" dataRate="10E9" />
+	<Path from="66" to="33" value="1" lambda="16" length="473.8016755" dataRate="10E9" />
+	<Path from="34" to="38" value="1" lambda="16" length="377.8363294" dataRate="10E9" />
+	<Path from="38" to="34" value="1" lambda="16" length="377.8363294" dataRate="10E9" />
+	<Path from="35" to="69" value="1" lambda="16" length="397.1149107" dataRate="10E9" />
+	<Path from="69" to="35" value="1" lambda="16" length="397.1149107" dataRate="10E9" />
+	<Path from="35" to="74" value="1" lambda="16" length="129.8250315" dataRate="10E9" />
+	<Path from="74" to="35" value="1" lambda="16" length="129.8250315" dataRate="10E9" />
+	<Path from="36" to="37" value="1" lambda="16" length="568.3338475" dataRate="10E9" />
+	<Path from="37" to="36" value="1" lambda="16" length="568.3338475" dataRate="10E9" />
+	<Path from="37" to="45" value="1" lambda="16" length="561.3270039" dataRate="10E9" />
+	<Path from="45" to="37" value="1" lambda="16" length="561.3270039" dataRate="10E9" />
+	<Path from="39" to="68" value="1" lambda="16" length="653.3593336" dataRate="10E9" />
+	<Path from="68" to="39" value="1" lambda="16" length="653.3593336" dataRate="10E9" />
+	<Path from="40" to="41" value="1" lambda="16" length="24.21353477" dataRate="10E9" />
+	<Path from="41" to="40" value="1" lambda="16" length="24.21353477" dataRate="10E9" />
+	<Path from="40" to="62" value="1" lambda="16" length="199.5750874" dataRate="10E9" />
+	<Path from="62" to="40" value="1" lambda="16" length="199.5750874" dataRate="10E9" />
+	<Path from="40" to="75" value="1" lambda="16" length="204.1516726" dataRate="10E9" />
+	<Path from="75" to="40" value="1" lambda="16" length="204.1516726" dataRate="10E9" />
+	<Path from="41" to="47" value="1" lambda="16" length="136.0604521" dataRate="10E9" />
+	<Path from="47" to="41" value="1" lambda="16" length="136.0604521" dataRate="10E9" />
+	<Path from="42" to="52" value="1" lambda="16" length="298.6558234" dataRate="10E9" />
+	<Path from="52" to="42" value="1" lambda="16" length="298.6558234" dataRate="10E9" />
+	<Path from="42" to="75" value="1" lambda="16" length="383.6690534" dataRate="10E9" />
+	<Path from="75" to="42" value="1" lambda="16" length="383.6690534" dataRate="10E9" />
+	<Path from="43" to="55" value="1" lambda="16" length="132.6490217" dataRate="10E9" />
+	<Path from="55" to="43" value="1" lambda="16" length="132.6490217" dataRate="10E9" />
+	<Path from="43" to="56" value="1" lambda="16" length="1135.717402" dataRate="10E9" />
+	<Path from="56" to="43" value="1" lambda="16" length="1135.717402" dataRate="10E9" />
+	<Path from="43" to="59" value="1" lambda="16" length="25.71991716" dataRate="10E9" />
+	<Path from="59" to="43" value="1" lambda="16" length="25.71991716" dataRate="10E9" />
+	<Path from="44" to="72" value="1" lambda="16" length="193.3587768" dataRate="10E9" />
+	<Path from="72" to="44" value="1" lambda="16" length="193.3587768" dataRate="10E9" />
+	<Path from="46" to="74" value="1" lambda="16" length="275.7928548" dataRate="10E9" />
+	<Path from="74" to="46" value="1" lambda="16" length="275.7928548" dataRate="10E9" />
+	<Path from="47" to="62" value="1" lambda="16" length="193.4089904" dataRate="10E9" />
+	<Path from="62" to="47" value="1" lambda="16" length="193.4089904" dataRate="10E9" />
+	<Path from="48" to="58" value="1" lambda="16" length="574.6750816" dataRate="10E9" />
+	<Path from="58" to="48" value="1" lambda="16" length="574.6750816" dataRate="10E9" />
+	<Path from="48" to="71" value="1" lambda="16" length="222.4582756" dataRate="10E9" />
+	<Path from="71" to="48" value="1" lambda="16" length="222.4582756" dataRate="10E9" />
+	<Path from="49" to="62" value="1" lambda="16" length="473.5653806" dataRate="10E9" />
+	<Path from="62" to="49" value="1" lambda="16" length="473.5653806" dataRate="10E9" />
+	<Path from="50" to="55" value="1" lambda="16" length="937.7404056" dataRate="10E9" />
+	<Path from="55" to="50" value="1" lambda="16" length="937.7404056" dataRate="10E9" />
+	<Path from="50" to="56" value="1" lambda="16" length="1221.189289" dataRate="10E9" />
+	<Path from="56" to="50" value="1" lambda="16" length="1221.189289" dataRate="10E9" />
+	<Path from="50" to="63" value="1" lambda="16" length="279.0817311" dataRate="10E9" />
+	<Path from="63" to="50" value="1" lambda="16" length="279.0817311" dataRate="10E9" />
+	<Path from="53" to="73" value="1" lambda="16" length="190.1446685" dataRate="10E9" />
+	<Path from="73" to="53" value="1" lambda="16" length="190.1446685" dataRate="10E9" />
+	<Path from="54" to="67" value="1" lambda="16" length="145.265921" dataRate="10E9" />
+	<Path from="67" to="54" value="1" lambda="16" length="145.265921" dataRate="10E9" />
+	<Path from="59" to="60" value="1" lambda="16" length="77.16267231" dataRate="10E9" />
+	<Path from="60" to="59" value="1" lambda="16" length="77.16267231" dataRate="10E9" />
+	<Path from="60" to="61" value="1" lambda="16" length="446.9898708" dataRate="10E9" />
+	<Path from="61" to="60" value="1" lambda="16" length="446.9898708" dataRate="10E9" />
+	<Path from="62" to="67" value="1" lambda="16" length="223.7750822" dataRate="10E9" />
+	<Path from="67" to="62" value="1" lambda="16" length="223.7750822" dataRate="10E9" />
+	<Path from="63" to="64" value="1" lambda="16" length="444.2069519" dataRate="10E9" />
+	<Path from="64" to="63" value="1" lambda="16" length="444.2069519" dataRate="10E9" />
+	<Path from="65" to="66" value="1" lambda="16" length="144.0599684" dataRate="10E9" />
+	<Path from="66" to="65" value="1" lambda="16" length="144.0599684" dataRate="10E9" />
+	<Path from="68" to="69" value="1" lambda="16" length="394.0942686" dataRate="10E9" />
+	<Path from="69" to="68" value="1" lambda="16" length="394.0942686" dataRate="10E9" />
+</Paths>
+<!-- Simulation Parameters -->
+<Simulation>
+	<!-- The simulator's main part. -->
+	<Main>
+		<!-- The variable of the simulation -->
+		<Variable name="/Generators/Traffic/@load" step="25" stop="800.1"/>
+		<!-- Number of requests. -->
+		<Requests value="1000" gracePeriod="10"/>
+		<!-- The control plane used for this simulation. -->
+		<!-- <ControlPlane class="main.ControlPlane"/> -->
+		<Network class="fon.antnet.AntFON" seed="13"/> 
+	</Main>
+	<!-- The generators of traffic for the simulation -->
+	<Generators>
+		<!-- Traffic type. -->	
+		<!-- Traffic class="event.EventSubscriber" type="distribution.Distribution" averagePacket="length(bytes)" load="total load network" dataRate="(bits/sec)" seed="random seed"/> -->
+		<Traffic class="fon.NonUniformRequestTraffic" type="Poissonian" start="100" load="400" duration="100" seed="" bandwidth="12.5,25.0,50.0,100.0" bandwidths_ratios="8,4,2,1" seed_bandwidth="666"/> 
+		<Traffic class="fon.antnet.AntTraffic" start="0" type="Constant" arrivalRate="100" serviceRate="1.0"/>		 
+	</Generators>
+	<!-- Accounting part. -->	
+	<Accounting>
+		<!-- The accounting class -->
+		<!-- <Accounting class="main.SimulationAccounting"/>-->
+		<Accounting class="fon.FlexiAccounting"/>
+		<!-- The subscribers that are accounted for the number of requests. -->
+		<!-- <RequestRelated class="event.EventSubscriber"/> -->
+		<RequestRelated class="fon.NonUniformRequestTraffic"/>
+		<Alert setup="0.5" restoration="0.5"/>
+	</Accounting>	
+	<!-- Configuration for ant routing -->
+	<Ant>
+		<Parametric reductor="0.3" factor="0.005"/>
+		<Routing power="5" correction="0.5"/>
+		<Pheromone amplifier="5" secondWeight="0.3" firstWeight="0.7" confidence="0.65"/>
+		<Seed value="150889"/>
+		<Holdoff antRate="1E3" timer="0.2"/>
+		<Heuristic type="BIGGEST_FREE_CONTIGUOUS_SLOTS"/>
+	</Ant>
+	<!-- Configuration for RSA. -->
+	<RSA>
+		<Overhead header="40" label="4"/>
+		<Link slots="300" anchorFrequency="" />
+		<Routing deterministic="true" hopLimit="99" rerouting="SEGMENT" attempts="2" maxAttempts="75"/>
+		<SA strategy="SEGMENTED_BEST_FIT" sliding="false" window="50"/>
+		<Class bandwidth= "12.5,25.0,50.0,100.0" />		
+	</RSA>
+	<!-- Configuration for the output. -->
+	<Outputs>
+		<!-- The output file containing the simulation values. -->
+		<Output file="teste_fon_300_ant_conus_100mil_power5_13_biggestcontiguous2_segmentedbf.txt"/>
+		<!-- The transient time slice. -->
+		<Transient timeSlice="10000"/>
+		<!-- The variables that are printed in the output file. -->
+		<Print>LOAD</Print>
+		<Print>BLOCKING</Print>
+		<Print>SETUP_TIME</Print>
+		<Print>AVG_HOP</Print>
+		<Print>AVG_EFF_HOP</Print>
+		<!--<Print>RESTORABILITY</Print>-->
+		<!--<Print>RESTORATION_TIME</Print>-->
+		<Print>OVERHEAD</Print>
+		<Print>MSG_EXCHANGED</Print>
+		<Print>BBR</Print>
+		<!-- In other files. -->
+		<Print>UTILIZATION</Print>	
+	</Outputs>
+	<!-- Failure Simulation-->
+	<Failure>
+		<!-- <NodeFailure node="666" time="10"/> -->
+		<!-- <LinkFailure link="1-2" time="10"/> -->
+		<Timing localization="10E-3"/>
+	</Failure>
+</Simulation>	 
+</config>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Created by pavani on 8 de Maio de 2003, 10:44 -->
+<config>
+<!-- First the physical topology of the network and after the simulation parameters. -->
+<!-- Nodes in network (completely arbitrary) -->
+<Nodes>
+    <Node>1</Node>            
+    <Node>2</Node>            
+    <Node>3</Node>            
+    <Node>4</Node>            
+    <Node>5</Node>            
+    <Node>6</Node>            
+    <Node>7</Node>            
+    <Node>8</Node>            
+    <Node>9</Node>            
+    <Node>10</Node>            
+    <Node>11</Node>            
+    <Node>12</Node>            
+    <Node>13</Node>            
+    <Node>14</Node>            
+</Nodes>
+<!-- Paths between nodes -->
+<Paths>
+	<!-- Path from="source_node" to="target_node" value="cost" lambda="number_wavelengths" dataRate="(bits/sec)" -->
+    <Path from="1" to="2" value="1" lambda="352" length="940" dataRate="10E9"/>
+    <Path from="1" to="3" value="1" lambda="352" length="1400" dataRate="10E9"/>
+    <Path from="1" to="8" value="1" lambda="352" length="2240" dataRate="10E9"/>
+    <Path from="2" to="3" value="1" lambda="352" length="560" dataRate="10E9"/>
+    <Path from="2" to="4" value="1" lambda="352" length="700" dataRate="10E9"/>
+    <Path from="3" to="6" value="1" lambda="352" length="1680" dataRate="10E9"/>
+    <Path from="4" to="5" value="1" lambda="352" length="560" dataRate="10E9"/>
+    <Path from="4" to="10" value="1" lambda="352" length="1820" dataRate="10E9"/>
+    <Path from="5" to="6" value="1" lambda="352" length="1120" dataRate="10E9"/>
+    <Path from="5" to="7" value="1" lambda="352" length="700" dataRate="10E9"/>
+    <Path from="6" to="9" value="1" lambda="352" length="980" dataRate="10E9"/>
+    <Path from="6" to="12" value="1" lambda="352" length="1680" dataRate="10E9"/>
+    <Path from="7" to="8" value="1" lambda="352" length="700" dataRate="10E9"/>
+    <Path from="8" to="11" value="1" lambda="352" length="700" dataRate="10E9"/>
+    <Path from="9" to="11" value="1" lambda="352" length="700" dataRate="10E9"/>
+    <Path from="10" to="13" value="1" lambda="352" length="700" dataRate="10E9"/>
+    <Path from="10" to="14" value="1" lambda="352" length="560" dataRate="10E9"/>
+    <Path from="11" to="13" value="1" lambda="352" length="280" dataRate="10E9"/>
+    <Path from="11" to="14" value="1" lambda="352" length="280" dataRate="10E9"/>
+    <Path from="12" to="13" value="1" lambda="352" length="140" dataRate="10E9"/>
+    <Path from="12" to="14" value="1" lambda="352" length="280" dataRate="10E9"/>
+
+    <Path from="2" to="1" value="1" lambda="352" length="940" dataRate="10E9"/>
+    <Path from="3" to="1" value="1" lambda="352" length="1400" dataRate="10E9"/>
+    <Path from="8" to="1" value="1" lambda="352" length="2240" dataRate="10E9"/>
+    <Path from="3" to="2" value="1" lambda="352" length="560" dataRate="10E9"/>
+    <Path from="4" to="2" value="1" lambda="352" length="700" dataRate="10E9"/>
+    <Path from="6" to="3" value="1" lambda="352" length="1680" dataRate="10E9"/>
+    <Path from="5" to="4" value="1" lambda="352" length="560" dataRate="10E9"/>
+    <Path from="10" to="4" value="1" lambda="352" length="1820" dataRate="10E9"/>
+    <Path from="6" to="5" value="1" lambda="352" length="1120" dataRate="10E9"/>
+    <Path from="7" to="5" value="1" lambda="352" length="700" dataRate="10E9"/>
+    <Path from="9" to="6" value="1" lambda="352" length="980" dataRate="10E9"/>
+    <Path from="12" to="6" value="1" lambda="352" length="1680" dataRate="10E9"/>
+    <Path from="8" to="7" value="1" lambda="352" length="700" dataRate="10E9"/>
+    <Path from="11" to="8" value="1" lambda="352" length="700" dataRate="10E9"/>
+    <Path from="11" to="9" value="1" lambda="352" length="700" dataRate="10E9"/>
+    <Path from="13" to="10" value="1" lambda="352" length="700" dataRate="10E9"/>
+    <Path from="14" to="10" value="1" lambda="352" length="560" dataRate="10E9"/>
+    <Path from="13" to="11" value="1" lambda="352" length="280" dataRate="10E9"/>
+    <Path from="14" to="11" value="1" lambda="352" length="280" dataRate="10E9"/>
+    <Path from="13" to="12" value="1" lambda="352" length="140" dataRate="10E9"/>
+    <Path from="14" to="12" value="1" lambda="352" length="280" dataRate="10E9"/>
+</Paths>
+<!-- Simulation Parameters -->
+<Simulation>
+	<!-- The simulator's main part. -->
+	<Main>
+		<!-- The variable of the simulation -->
+		<Variable name="/Generators/Traffic/@load" step="50" stop="310.1"/>
+		<!-- Number of requests. -->
+		<Requests value="10000" gracePeriod="10"/>
+		<!-- The control plane used for this simulation. -->
+		<!-- <ControlPlane class="main.ControlPlane"/> -->
+		<Network class="fon.acobased.ACOBasedFON" seed="666"/> 
+	</Main>
+	<!-- The generators of traffic for the simulation -->
+	<Generators>
+		<!-- Traffic type. -->	
+		<!-- Traffic class="event.EventSubscriber" type="distribution.Distribution" averagePacket="length(bytes)" load="total load network" dataRate="(bits/sec)" seed="random seed"/> -->
+		<Traffic class="fon.NonUniformRequestTraffic" type="Poissonian" start="100" load="10" duration="400" seed="" bandwidth="50.0,50.0,75.0" bandwidths_ratios="0.333,0.333,0.333" seed_bandwidth="666"/> 
+		<Traffic class="fon.acobased.ACOBasedTraffic" start="0" type="Constant" arrivalRate="100" serviceRate="1.0"/>		 
+	</Generators>
+	<!-- Accounting part. -->	
+	<Accounting>
+		<!-- The accounting class -->
+		<!-- <Accounting class="main.SimulationAccounting"/>-->
+		<Accounting class="fon.FlexiAccounting"/>
+		<!-- The subscribers that are accounted for the number of requests. -->
+		<!-- <RequestRelated class="event.EventSubscriber"/> -->
+		<RequestRelated class="fon.NonUniformRequestTraffic"/>
+		<Alert setup="0.5" restoration="0.5"/>
+	</Accounting>	
+	<!-- Configuration for ant routing -->
+	<Ant>
+		<!-- <Parametric reductor="0.3" factor="0.005"/> -->
+		<!-- <Routing power="5" correction="0.5"/> -->
+		<!--  <Pheromone amplifier="5" secondWeight="0.3" firstWeight="0.7" confidence="0.65"/> -->
+		<Pheromone balanceFactor="0.6" lengthReinforcement="1.85" contiguousReinforcement="0.4"/>		
+		<Seed value="150889"/>
+		<Holdoff antRate="1E3" timer="0.2"/>
+	</Ant>
+	<!-- Configuration for RSA. -->
+	<RSA>
+		<Overhead header="40" label="4"/>
+		<Link slots="352" anchorFrequency="" />
+		<Routing deterministic="true" ttl="21" rerouting="NONE" attempts="2" maxAttempts="21"/>
+		<SA strategy="FIRST_FIT" sliding="false" window="50"/>
+		<Class bandwidth= "50.0,50.0,75.0" />		
+	</RSA>
+	<!-- Configuration for the output. -->
+	<Outputs>
+		<!-- The output file containing the simulation values. -->
+		<Output file="teste_acobased_352_ant_nsfnet_100mil_2seed666.txt"/>
+		<!-- The transient time slice. -->
+		<Transient timeSlice="10000"/>
+		<!-- The variables that are printed in the output file. -->
+		<Print>LOAD</Print>
+		<Print>BLOCKING</Print>
+		<!-- <Print>SETUP_TIME</Print> -->
+		<!-- <Print>AVG_HOP</Print> -->
+		<!-- <Print>AVG_EFF_HOP</Print> -->
+		<!--<Print>RESTORABILITY</Print>-->
+		<!--<Print>RESTORATION_TIME</Print>-->
+		<!--<Print>OVERHEAD</Print> -->
+		<!--<Print>MSG_EXCHANGED</Print> -->
+		<Print>BBR</Print>
+		<!-- In other files. -->
+		<!--<Print>UTILIZATION</Print> -->	
+	</Outputs>
+	<!-- Failure Simulation-->
+	<Failure>
+		<!-- <NodeFailure node="666" time="10"/> -->
+		<!-- <LinkFailure link="1-2" time="10"/> -->
+		<Timing localization="10E-3"/>
+	</Failure>
+</Simulation>	 
+</config>
